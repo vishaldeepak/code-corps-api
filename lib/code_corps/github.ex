@@ -14,7 +14,7 @@ defmodule CodeCorps.Github do
   end
 
   def create_issue(attributes, project, current_user) do
-    access_token = current_user.access_token #|| default_user_token # need to create the default user
+    access_token = current_user.github_access_token || default_user_token() # need to create the Github user for this token
     client = Tentacat.Client.new(%{access_token: access_token})
     response = Tentacat.Issues.create(
       project.github_owner,
@@ -36,5 +36,9 @@ defmodule CodeCorps.Github do
       title: attributes[:title],
       body: attributes[:body]
     }
+  end
+
+  defp default_user_token do
+    System.get_env("GITHUB_DEFAULT_USER_TOKEN")
   end
 end
