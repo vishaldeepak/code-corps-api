@@ -20,7 +20,8 @@ defmodule CodeCorps.TaskViewTest do
           "status" => task.status,
           "state" => task.state,
           "title" => task.title,
-          "updated-at" => task.updated_at
+          "updated-at" => task.updated_at,
+          "github-id" => task.github_id
         },
         "id" => task.id |> Integer.to_string,
         "relationships" => %{
