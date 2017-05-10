@@ -1,7 +1,6 @@
 defmodule CodeCorps.Github do
 
   alias CodeCorps.{User, Repo}
-
   require Logger
 
   @doc """
@@ -32,7 +31,7 @@ defmodule CodeCorps.Github do
     end
   end
 
-  def update_issue(attributes, task, current_user) do
+  def update_issue(task, attributes, current_user) do
     access_token = current_user.github_access_token || default_user_token() # need to create the Github user for this token
     client = Tentacat.Client.new(%{access_token: access_token})
     response = Tentacat.Issues.update(
@@ -43,7 +42,7 @@ defmodule CodeCorps.Github do
       client
     )
     unless response.status == 200 do
-      # log error
+      Logger.error "Could not update Task ID: #{task.id}. Error: #{response.body}"
     end
   end
 
