@@ -2,6 +2,8 @@ defmodule CodeCorps.Github do
 
   alias CodeCorps.{User, Repo}
 
+  require Logger
+
   @doc """
   Temporary function until the actual behavior is implemented.
   """
@@ -13,29 +15,21 @@ defmodule CodeCorps.Github do
     |> Repo.update()
   end
 
-  def create_issue(attributes, project, current_user) do
+  def create_issue(project, attributes, current_user) do
     access_token = current_user.github_access_token || default_user_token() # need to create the Github user for this token
     client = Tentacat.Client.new(%{access_token: access_token})
     response = Tentacat.Issues.create(
       project.github_owner,
       project.github_repo,
-      issue_attributes(attributes),
+      attributes,
       client
     )
     case response.status do
       201 ->
         response.body["id"] # return the github id
       _ ->
-        # log error
-        nil
+        Logger.error "Could not create task for Project ID: #{project.id}. Error: #{response.body}"
     end
-  end
-
-  defp issue_attributes(attributes) do
-    %{
-      title: attributes[:title],
-      body: attributes[:body]
-    }
   end
 
   defp default_user_token do
