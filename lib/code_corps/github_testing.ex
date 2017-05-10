@@ -1,5 +1,5 @@
 defmodule CodeCorps.GithubTesting do
-  def create_issue(attributes, _project, _current_user) do
+  def create_issue(project, _attributes, _current_user) do
     case attributes["error_testing"] do
       true ->
         nil
