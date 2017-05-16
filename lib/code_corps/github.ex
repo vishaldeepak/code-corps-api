@@ -1,5 +1,5 @@
 defmodule CodeCorps.GitHub do
-  alias CodeCorps.{User, Repo}
+  alias CodeCorps.{User, Task, Repo}
   require Logger
 
   @api Application.get_env(:code_corps, :github_api)
@@ -40,20 +40,25 @@ defmodule CodeCorps.GitHub do
     |> Repo.update()
   end
 
-  def create_issue(project, attributes, current_user) do
+  def create_issue(task, current_user, github_owner, github_repo) do
     access_token = current_user.github_access_token || default_user_token() # need to create the Github user for this token
     client = Tentacat.Client.new(%{access_token: access_token})
-    response = Tentacat.Issues.create(
-      project.github_owner,
-      project.github_repo,
-      attributes,
+    request = Tentacat.Issues.create(
+      github_owner,
+      github_repo,
+      Map.take(task, [:title, :body]),
       client
     )
-    case response.status do
-      201 ->
-        response.body["id"] # return the github id
-      _ ->
-        Logger.error "Could not create task for Project ID: #{project.id}. Error: #{response.body}"
+    case request do
+      {:ok, response} ->
+        github_id = response.body["id"] |> String.to_integer()
+
+        task
+        |> Task.github_changeset(%{"github_id" => github_id})
+        |> Repo.update()
+      {:error, error} ->
+        Logger.error "Could not create issue for Task ID: #{task.id}. Error: #{error}"
+        {:ok, task}
     end
   end
 

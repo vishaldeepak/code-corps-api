@@ -33,7 +33,7 @@ defmodule CodeCorps.Task do
 
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:title, :markdown, :task_list_id, :position, :github_id])
+    |> cast(params, [:title, :markdown, :task_list_id, :position])
     |> validate_required([:title, :markdown, :task_list_id])
     |> assoc_constraint(:task_list)
     |> apply_position()
@@ -58,6 +58,12 @@ defmodule CodeCorps.Task do
     |> cast(params, [:status])
     |> validate_inclusion(:status, statuses())
     |> put_change(:state, "edited")
+  end
+
+  def github_changeset(struct, params) do
+    struct
+    |> cast(params, [:github_id])
+    |> validate_required([:github_id])
   end
 
   def apply_position(changeset) do
