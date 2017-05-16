@@ -174,5 +174,11 @@ defmodule CodeCorps.TaskTest do
       assert changeset.changes |> Map.has_key?(:github_id)
       refute changeset.changes |> Map.has_key?(:fake_attribute)
     end
+
+    test "validates github_id attribute is included" do
+      changes = %{"fake_attribute" => "foo"}
+      changeset = Task.github_changeset(%Task{}, changes)
+      refute changeset.valid?
+    end
   end
 end
