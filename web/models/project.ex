@@ -79,11 +79,10 @@ defmodule CodeCorps.Project do
   @doc """
   Builds a changeset for creating a project that has a connected GitHub repo.
   """
-  def github_create_changeset(struct, params) do
+  def github_changeset(struct, params) do
     struct
-    |> create_changeset(params)
-    |> cast(params, [:github_id])
-    |> validate_required([:github_id])
+    |> cast(params, [:github_repo, :github_owner])
+    |> validate_required([:github_repo, :github_owner])
   end
 
   @doc """

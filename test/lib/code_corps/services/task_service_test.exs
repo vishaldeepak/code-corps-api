@@ -17,7 +17,7 @@ defmodule CodeCorps.Services.TaskServiceTest do
   describe "create_task/2" do
     @tag :authenticated
     test "Github module is called to create issue when project is connected to github", %{conn: conn, current_user: current_user} do
-      project = insert(:project, github_id: 1)
+      project = insert(:project, github_repo: "repo")
       task_list = insert(:task_list, project: project)
       attrs = @valid_attrs |> Map.merge(%{"project_id" => project.id, "user_id" => current_user.id, "task_list_id" => task_list.id})
       {_ok, task} = TaskService.create_task(conn, attrs)
@@ -29,7 +29,7 @@ defmodule CodeCorps.Services.TaskServiceTest do
 
     @tag :authenticated
     test "Github module is NOT called to create issue when project is NOT connected to github", %{conn: conn, current_user: current_user} do
-      project = insert(:project, github_id: nil)
+      project = insert(:project, github_repo: nil)
       task_list = insert(:task_list, project: project)
       attrs = @valid_attrs |> Map.merge(%{"project_id" => project.id, "user_id" => current_user.id, "task_list_id" => task_list.id})
       {_ok, task} = TaskService.create_task(conn, attrs)
@@ -40,7 +40,7 @@ defmodule CodeCorps.Services.TaskServiceTest do
 
     @tag :authenticated
     test "it returns error when invalid task attributes and doesnt call the Github module", %{conn: conn, current_user: current_user} do
-      project = insert(:project, github_id: 1)
+      project = insert(:project, github_repo: "repo")
       task_list = insert(:task_list, project: project)
       attrs = @invalid_attrs |> Map.merge(%{"project_id" => project.id, "user_id" => current_user.id, "task_list_id" => task_list.id})
       {_error, changeset} = TaskService.create_task(conn, attrs)

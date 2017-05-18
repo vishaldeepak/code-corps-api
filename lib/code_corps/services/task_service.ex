@@ -11,7 +11,7 @@ defmodule CodeCorps.Services.TaskService do
     case Repo.insert(changeset) do
       {:ok, task} ->
         project = Project |> Repo.get(attributes["project_id"])
-        if project.github_id do
+        if project.github_repo do
           current_user = Guardian.Plug.current_resource(conn)
           github().create_issue(task, current_user, project.github_owner, project.github_repo)
         else

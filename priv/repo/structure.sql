@@ -371,6 +371,7 @@ CREATE TABLE projects (
     default_color character varying(255),
     website character varying(255),
     should_link_externally boolean DEFAULT false,
+    github_id integer,
     github_repo character varying(255),
     github_owner character varying(255),
     CONSTRAINT set_long_description_markdown_if_approved CHECK (((long_description_markdown IS NOT NULL) OR (approved = false)))

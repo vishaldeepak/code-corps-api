@@ -87,15 +87,18 @@ defmodule CodeCorps.ProjectTest do
     end
   end
 
-  describe "github_create_changeset/2" do
-    test "github create changeset with valid attributes" do
+  describe "github_changeset/2" do
+    test "github changeset with valid attributes" do
       attrs = Map.merge(@valid_attrs, %{
-        github_id: 1,
+        github_repo: "repo",
+        github_owner: "owner",
         organization_id: 1
       })
 
-      changeset = Project.github_create_changeset(%Project{}, attrs)
+      changeset = Project.github_changeset(%Project{}, attrs)
       assert changeset.valid?
+      assert changeset.changes |> Map.has_key?(:github_repo)
+      assert changeset.changes |> Map.has_key?(:github_owner)
     end
   end
 
