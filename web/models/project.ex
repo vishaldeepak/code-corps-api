@@ -29,7 +29,6 @@ defmodule CodeCorps.Project do
     field :title, :string
     field :total_monthly_donated, :integer, default: 0
     field :website, :string
-    field :github_id, :integer
     field :github_repo, :string
     field :github_owner, :string
 
