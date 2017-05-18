@@ -73,7 +73,8 @@ defmodule CodeCorps.Factories do
       slug: sequence(:slug, &"project-#{&1}"),
       title: sequence(:title, &"Project #{&1}"),
       website: sequence(:website, &"http://test-#{&1}.com"),
-      github_id: nil,
+      github_repo: nil,
+      github_owner: nil,
 
       organization: build(:organization)
     }
