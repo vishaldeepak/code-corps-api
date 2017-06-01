@@ -1,4 +1,4 @@
-defmodule CodeCorps.GithubTesting do
+defmodule CodeCorps.GitHubTesting do
   alias CodeCorps.{Task, Repo}
 
   def create_issue(task, _current_user, _github_owner, _github_repo) do

@@ -65,8 +65,8 @@ config :code_corps, :icon_color_generator, CodeCorps.RandomIconColor.Generator
 # Set Corsica logging to output a console warning when rejecting a request
 config :code_corps, :corsica_log_level, [rejected: :warn]
 
-# Set the Github module
-config :code_corps, github: CodeCorps.Github
+# Set the GitHub module
+config :code_corps, github: CodeCorps.GitHub
 
 config :stripity_stripe,
   api_key: System.get_env("STRIPE_SECRET_KEY"),

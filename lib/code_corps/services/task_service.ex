@@ -21,7 +21,7 @@ defmodule CodeCorps.Services.TaskService do
     end
   end
 
-  @spec github() :: CodeCorps.Github | CodeCorps.GithubTesting
+  @spec github() :: CodeCorps.GitHub | CodeCorps.GitHubTesting
   defp github do
     Application.get_env(:code_corps, :github)
   end

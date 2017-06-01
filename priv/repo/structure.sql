@@ -2,16 +2,12 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.5.4
--- Dumped by pg_dump version 9.5.4
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
-SET row_security = off;
 
 --
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
@@ -51,7 +47,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: auth_token; Type: TABLE; Schema: public; Owner: -
+-- Name: auth_token; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE auth_token (
@@ -83,7 +79,7 @@ ALTER SEQUENCE auth_token_id_seq OWNED BY auth_token.id;
 
 
 --
--- Name: categories; Type: TABLE; Schema: public; Owner: -
+-- Name: categories; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE categories (
@@ -116,7 +112,7 @@ ALTER SEQUENCE categories_id_seq OWNED BY categories.id;
 
 
 --
--- Name: comments; Type: TABLE; Schema: public; Owner: -
+-- Name: comments; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE comments (
@@ -151,7 +147,7 @@ ALTER SEQUENCE comments_id_seq OWNED BY comments.id;
 
 
 --
--- Name: donation_goals; Type: TABLE; Schema: public; Owner: -
+-- Name: donation_goals; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE donation_goals (
@@ -185,7 +181,7 @@ ALTER SEQUENCE donation_goals_id_seq OWNED BY donation_goals.id;
 
 
 --
--- Name: organizations; Type: TABLE; Schema: public; Owner: -
+-- Name: organizations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE organizations (
@@ -222,7 +218,7 @@ ALTER SEQUENCE organizations_id_seq OWNED BY organizations.id;
 
 
 --
--- Name: previews; Type: TABLE; Schema: public; Owner: -
+-- Name: previews; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE previews (
@@ -255,7 +251,7 @@ ALTER SEQUENCE previews_id_seq OWNED BY previews.id;
 
 
 --
--- Name: project_categories; Type: TABLE; Schema: public; Owner: -
+-- Name: project_categories; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE project_categories (
@@ -287,7 +283,7 @@ ALTER SEQUENCE project_categories_id_seq OWNED BY project_categories.id;
 
 
 --
--- Name: project_skills; Type: TABLE; Schema: public; Owner: -
+-- Name: project_skills; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE project_skills (
@@ -319,7 +315,7 @@ ALTER SEQUENCE project_skills_id_seq OWNED BY project_skills.id;
 
 
 --
--- Name: project_users; Type: TABLE; Schema: public; Owner: -
+-- Name: project_users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE project_users (
@@ -352,7 +348,7 @@ ALTER SEQUENCE project_users_id_seq OWNED BY project_users.id;
 
 
 --
--- Name: projects; Type: TABLE; Schema: public; Owner: -
+-- Name: projects; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE projects (
@@ -398,7 +394,7 @@ ALTER SEQUENCE projects_id_seq OWNED BY projects.id;
 
 
 --
--- Name: role_skills; Type: TABLE; Schema: public; Owner: -
+-- Name: role_skills; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE role_skills (
@@ -431,7 +427,7 @@ ALTER SEQUENCE role_skills_id_seq OWNED BY role_skills.id;
 
 
 --
--- Name: roles; Type: TABLE; Schema: public; Owner: -
+-- Name: roles; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE roles (
@@ -464,7 +460,7 @@ ALTER SEQUENCE roles_id_seq OWNED BY roles.id;
 
 
 --
--- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE schema_migrations (
@@ -474,7 +470,7 @@ CREATE TABLE schema_migrations (
 
 
 --
--- Name: skills; Type: TABLE; Schema: public; Owner: -
+-- Name: skills; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE skills (
@@ -507,7 +503,7 @@ ALTER SEQUENCE skills_id_seq OWNED BY skills.id;
 
 
 --
--- Name: slugged_routes; Type: TABLE; Schema: public; Owner: -
+-- Name: slugged_routes; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE slugged_routes (
@@ -540,7 +536,7 @@ ALTER SEQUENCE slugged_routes_id_seq OWNED BY slugged_routes.id;
 
 
 --
--- Name: stripe_connect_accounts; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_connect_accounts; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_connect_accounts (
@@ -622,7 +618,7 @@ ALTER SEQUENCE stripe_connect_accounts_id_seq OWNED BY stripe_connect_accounts.i
 
 
 --
--- Name: stripe_connect_cards; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_connect_cards; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_connect_cards (
@@ -655,7 +651,7 @@ ALTER SEQUENCE stripe_connect_cards_id_seq OWNED BY stripe_connect_cards.id;
 
 
 --
--- Name: stripe_connect_charges; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_connect_charges; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_connect_charges (
@@ -708,7 +704,7 @@ ALTER SEQUENCE stripe_connect_charges_id_seq OWNED BY stripe_connect_charges.id;
 
 
 --
--- Name: stripe_connect_customers; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_connect_customers; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_connect_customers (
@@ -742,7 +738,7 @@ ALTER SEQUENCE stripe_connect_customers_id_seq OWNED BY stripe_connect_customers
 
 
 --
--- Name: stripe_connect_plans; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_connect_plans; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_connect_plans (
@@ -777,7 +773,7 @@ ALTER SEQUENCE stripe_connect_plans_id_seq OWNED BY stripe_connect_plans.id;
 
 
 --
--- Name: stripe_connect_subscriptions; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_connect_subscriptions; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_connect_subscriptions (
@@ -821,7 +817,7 @@ ALTER SEQUENCE stripe_connect_subscriptions_id_seq OWNED BY stripe_connect_subsc
 
 
 --
--- Name: stripe_events; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_events; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_events (
@@ -859,7 +855,7 @@ ALTER SEQUENCE stripe_events_id_seq OWNED BY stripe_events.id;
 
 
 --
--- Name: stripe_external_accounts; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_external_accounts; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_external_accounts (
@@ -902,7 +898,7 @@ ALTER SEQUENCE stripe_external_accounts_id_seq OWNED BY stripe_external_accounts
 
 
 --
--- Name: stripe_file_upload; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_file_upload; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_file_upload (
@@ -937,7 +933,7 @@ ALTER SEQUENCE stripe_file_upload_id_seq OWNED BY stripe_file_upload.id;
 
 
 --
--- Name: stripe_invoices; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_invoices; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_invoices (
@@ -996,7 +992,7 @@ ALTER SEQUENCE stripe_invoices_id_seq OWNED BY stripe_invoices.id;
 
 
 --
--- Name: stripe_platform_cards; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_platform_cards; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_platform_cards (
@@ -1035,7 +1031,7 @@ ALTER SEQUENCE stripe_platform_cards_id_seq OWNED BY stripe_platform_cards.id;
 
 
 --
--- Name: stripe_platform_customers; Type: TABLE; Schema: public; Owner: -
+-- Name: stripe_platform_customers; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE stripe_platform_customers (
@@ -1071,7 +1067,7 @@ ALTER SEQUENCE stripe_platform_customers_id_seq OWNED BY stripe_platform_custome
 
 
 --
--- Name: task_lists; Type: TABLE; Schema: public; Owner: -
+-- Name: task_lists; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE task_lists (
@@ -1105,7 +1101,7 @@ ALTER SEQUENCE task_lists_id_seq OWNED BY task_lists.id;
 
 
 --
--- Name: task_skills; Type: TABLE; Schema: public; Owner: -
+-- Name: task_skills; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE task_skills (
@@ -1137,7 +1133,7 @@ ALTER SEQUENCE task_skills_id_seq OWNED BY task_skills.id;
 
 
 --
--- Name: tasks; Type: TABLE; Schema: public; Owner: -
+-- Name: tasks; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE tasks (
@@ -1178,7 +1174,7 @@ ALTER SEQUENCE tasks_id_seq OWNED BY tasks.id;
 
 
 --
--- Name: user_categories; Type: TABLE; Schema: public; Owner: -
+-- Name: user_categories; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE user_categories (
@@ -1210,7 +1206,7 @@ ALTER SEQUENCE user_categories_id_seq OWNED BY user_categories.id;
 
 
 --
--- Name: user_roles; Type: TABLE; Schema: public; Owner: -
+-- Name: user_roles; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE user_roles (
@@ -1242,7 +1238,7 @@ ALTER SEQUENCE user_roles_id_seq OWNED BY user_roles.id;
 
 
 --
--- Name: user_skills; Type: TABLE; Schema: public; Owner: -
+-- Name: user_skills; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE user_skills (
@@ -1274,7 +1270,7 @@ ALTER SEQUENCE user_skills_id_seq OWNED BY user_skills.id;
 
 
 --
--- Name: user_tasks; Type: TABLE; Schema: public; Owner: -
+-- Name: user_tasks; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE user_tasks (
@@ -1306,7 +1302,7 @@ ALTER SEQUENCE user_tasks_id_seq OWNED BY user_tasks.id;
 
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: -
+-- Name: users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE TABLE users (
@@ -1589,7 +1585,7 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 
 
 --
--- Name: auth_token_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: auth_token_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY auth_token
@@ -1597,7 +1593,7 @@ ALTER TABLE ONLY auth_token
 
 
 --
--- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY categories
@@ -1605,7 +1601,7 @@ ALTER TABLE ONLY categories
 
 
 --
--- Name: comments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: comments_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY comments
@@ -1613,7 +1609,7 @@ ALTER TABLE ONLY comments
 
 
 --
--- Name: donation_goals_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: donation_goals_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY donation_goals
@@ -1621,7 +1617,7 @@ ALTER TABLE ONLY donation_goals
 
 
 --
--- Name: organizations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: organizations_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY organizations
@@ -1629,7 +1625,7 @@ ALTER TABLE ONLY organizations
 
 
 --
--- Name: previews_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: previews_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY previews
@@ -1637,7 +1633,7 @@ ALTER TABLE ONLY previews
 
 
 --
--- Name: project_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: project_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY project_categories
@@ -1645,7 +1641,7 @@ ALTER TABLE ONLY project_categories
 
 
 --
--- Name: project_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: project_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY project_skills
@@ -1653,7 +1649,7 @@ ALTER TABLE ONLY project_skills
 
 
 --
--- Name: project_users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: project_users_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY project_users
@@ -1661,7 +1657,7 @@ ALTER TABLE ONLY project_users
 
 
 --
--- Name: projects_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: projects_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY projects
@@ -1669,7 +1665,7 @@ ALTER TABLE ONLY projects
 
 
 --
--- Name: role_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: role_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY role_skills
@@ -1677,7 +1673,7 @@ ALTER TABLE ONLY role_skills
 
 
 --
--- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY roles
@@ -1685,7 +1681,7 @@ ALTER TABLE ONLY roles
 
 
 --
--- Name: schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY schema_migrations
@@ -1693,7 +1689,7 @@ ALTER TABLE ONLY schema_migrations
 
 
 --
--- Name: skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY skills
@@ -1701,7 +1697,7 @@ ALTER TABLE ONLY skills
 
 
 --
--- Name: slugged_routes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: slugged_routes_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY slugged_routes
@@ -1709,7 +1705,7 @@ ALTER TABLE ONLY slugged_routes
 
 
 --
--- Name: stripe_connect_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: stripe_connect_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY stripe_connect_cards
@@ -1717,7 +1713,7 @@ ALTER TABLE ONLY stripe_connect_cards
 
 
 --
--- Name: stripe_connect_charges_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: stripe_connect_charges_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY stripe_connect_charges
@@ -1725,7 +1721,7 @@ ALTER TABLE ONLY stripe_connect_charges
 
 
 --
--- Name: stripe_connect_customers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: stripe_connect_customers_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY stripe_connect_customers
@@ -1733,7 +1729,7 @@ ALTER TABLE ONLY stripe_connect_customers
 
 
 --
--- Name: stripe_events_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: stripe_events_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY stripe_events
@@ -1741,7 +1737,7 @@ ALTER TABLE ONLY stripe_events
 
 
 --
--- Name: stripe_external_accounts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: stripe_external_accounts_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY stripe_external_accounts
@@ -1749,7 +1745,7 @@ ALTER TABLE ONLY stripe_external_accounts
 
 
 --
--- Name: stripe_file_upload_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: stripe_file_upload_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY stripe_file_upload
@@ -1757,7 +1753,7 @@ ALTER TABLE ONLY stripe_file_upload
 
 
 --
--- Name: stripe_invoices_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: stripe_invoices_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY stripe_invoices
@@ -1765,7 +1761,7 @@ ALTER TABLE ONLY stripe_invoices
 
 
 --
--- Name: task_lists_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: task_lists_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY task_lists
@@ -1773,7 +1769,7 @@ ALTER TABLE ONLY task_lists
 
 
 --
--- Name: task_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: task_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY task_skills
@@ -1781,7 +1777,7 @@ ALTER TABLE ONLY task_skills
 
 
 --
--- Name: user_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: user_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY user_categories
@@ -1789,7 +1785,7 @@ ALTER TABLE ONLY user_categories
 
 
 --
--- Name: user_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: user_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY user_roles
@@ -1797,7 +1793,7 @@ ALTER TABLE ONLY user_roles
 
 
 --
--- Name: user_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: user_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY user_skills
@@ -1805,7 +1801,7 @@ ALTER TABLE ONLY user_skills
 
 
 --
--- Name: user_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: user_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY user_tasks
@@ -1813,7 +1809,7 @@ ALTER TABLE ONLY user_tasks
 
 
 --
--- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY users
@@ -1821,378 +1817,378 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: auth_token_user_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: auth_token_user_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX auth_token_user_id_index ON auth_token USING btree (user_id);
 
 
 --
--- Name: comments_task_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: comments_task_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX comments_task_id_index ON comments USING btree (task_id);
 
 
 --
--- Name: comments_user_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: comments_user_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX comments_user_id_index ON comments USING btree (user_id);
 
 
 --
--- Name: donation_goals_current_unique_to_project; Type: INDEX; Schema: public; Owner: -
+-- Name: donation_goals_current_unique_to_project; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX donation_goals_current_unique_to_project ON donation_goals USING btree (project_id) WHERE current;
 
 
 --
--- Name: donation_goals_project_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: donation_goals_project_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX donation_goals_project_id_index ON donation_goals USING btree (project_id);
 
 
 --
--- Name: index_categories_on_slug; Type: INDEX; Schema: public; Owner: -
+-- Name: index_categories_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_categories_on_slug ON categories USING btree (lower((slug)::text));
 
 
 --
--- Name: index_projects_on_role_id_skill_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_projects_on_role_id_skill_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_projects_on_role_id_skill_id ON role_skills USING btree (role_id, skill_id);
 
 
 --
--- Name: index_projects_on_slug; Type: INDEX; Schema: public; Owner: -
+-- Name: index_projects_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_projects_on_slug ON projects USING btree (lower((slug)::text));
 
 
 --
--- Name: index_projects_on_user_id_skill_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_projects_on_user_id_skill_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_projects_on_user_id_skill_id ON user_skills USING btree (user_id, skill_id);
 
 
 --
--- Name: index_skills_on_title; Type: INDEX; Schema: public; Owner: -
+-- Name: index_skills_on_title; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_skills_on_title ON skills USING btree (lower((title)::text));
 
 
 --
--- Name: organizations_approved_index; Type: INDEX; Schema: public; Owner: -
+-- Name: organizations_approved_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX organizations_approved_index ON organizations USING btree (approved);
 
 
 --
--- Name: organizations_lower_slug_index; Type: INDEX; Schema: public; Owner: -
+-- Name: organizations_lower_slug_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX organizations_lower_slug_index ON organizations USING btree (lower((slug)::text));
 
 
 --
--- Name: project_categories_project_id_category_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: project_categories_project_id_category_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX project_categories_project_id_category_id_index ON project_categories USING btree (project_id, category_id);
 
 
 --
--- Name: project_skills_project_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: project_skills_project_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX project_skills_project_id_index ON project_skills USING btree (project_id);
 
 
 --
--- Name: project_skills_project_id_skill_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: project_skills_project_id_skill_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX project_skills_project_id_skill_id_index ON project_skills USING btree (project_id, skill_id);
 
 
 --
--- Name: project_skills_skill_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: project_skills_skill_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX project_skills_skill_id_index ON project_skills USING btree (skill_id);
 
 
 --
--- Name: project_users_user_id_project_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: project_users_user_id_project_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX project_users_user_id_project_id_index ON project_users USING btree (user_id, project_id);
 
 
 --
--- Name: projects_approved_index; Type: INDEX; Schema: public; Owner: -
+-- Name: projects_approved_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX projects_approved_index ON projects USING btree (approved);
 
 
 --
--- Name: slugged_routes_lower_slug_index; Type: INDEX; Schema: public; Owner: -
+-- Name: slugged_routes_lower_slug_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX slugged_routes_lower_slug_index ON slugged_routes USING btree (lower((slug)::text));
 
 
 --
--- Name: stripe_connect_accounts_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_accounts_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_accounts_id_from_stripe_index ON stripe_connect_accounts USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_connect_accounts_organization_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_accounts_organization_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_accounts_organization_id_index ON stripe_connect_accounts USING btree (organization_id);
 
 
 --
--- Name: stripe_connect_accounts_pkey; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_accounts_pkey; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_accounts_pkey ON stripe_connect_accounts USING btree (id);
 
 
 --
--- Name: stripe_connect_cards_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_cards_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_cards_id_from_stripe_index ON stripe_connect_cards USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_connect_cards_stripe_connect_account_id_stripe_platform_; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_cards_stripe_connect_account_id_stripe_platform_; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_cards_stripe_connect_account_id_stripe_platform_ ON stripe_connect_cards USING btree (stripe_connect_account_id, stripe_platform_card_id);
 
 
 --
--- Name: stripe_connect_charges_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_charges_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_charges_id_from_stripe_index ON stripe_connect_charges USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_connect_customers_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_customers_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_customers_id_from_stripe_index ON stripe_connect_customers USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_connect_customers_stripe_connect_account_id_stripe_platf; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_customers_stripe_connect_account_id_stripe_platf; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_customers_stripe_connect_account_id_stripe_platf ON stripe_connect_customers USING btree (stripe_connect_account_id, stripe_platform_customer_id);
 
 
 --
--- Name: stripe_connect_plans_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_plans_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_plans_id_from_stripe_index ON stripe_connect_plans USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_connect_plans_pkey; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_plans_pkey; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_plans_pkey ON stripe_connect_plans USING btree (id);
 
 
 --
--- Name: stripe_connect_plans_project_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_plans_project_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_plans_project_id_index ON stripe_connect_plans USING btree (project_id);
 
 
 --
--- Name: stripe_connect_subscriptions_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_subscriptions_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_subscriptions_id_from_stripe_index ON stripe_connect_subscriptions USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_connect_subscriptions_pkey; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_subscriptions_pkey; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_connect_subscriptions_pkey ON stripe_connect_subscriptions USING btree (id);
 
 
 --
--- Name: stripe_connect_subscriptions_plan_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_subscriptions_plan_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX stripe_connect_subscriptions_plan_id_from_stripe_index ON stripe_connect_subscriptions USING btree (plan_id_from_stripe);
 
 
 --
--- Name: stripe_connect_subscriptions_stripe_connect_plan_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_subscriptions_stripe_connect_plan_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX stripe_connect_subscriptions_stripe_connect_plan_id_index ON stripe_connect_subscriptions USING btree (stripe_connect_plan_id);
 
 
 --
--- Name: stripe_connect_subscriptions_user_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_connect_subscriptions_user_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX stripe_connect_subscriptions_user_id_index ON stripe_connect_subscriptions USING btree (user_id);
 
 
 --
--- Name: stripe_events_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_events_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_events_id_from_stripe_index ON stripe_events USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_invoices_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_invoices_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_invoices_id_from_stripe_index ON stripe_invoices USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_platform_cards_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_platform_cards_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_platform_cards_id_from_stripe_index ON stripe_platform_cards USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_platform_cards_pkey; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_platform_cards_pkey; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_platform_cards_pkey ON stripe_platform_cards USING btree (id);
 
 
 --
--- Name: stripe_platform_cards_user_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_platform_cards_user_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_platform_cards_user_id_index ON stripe_platform_cards USING btree (user_id);
 
 
 --
--- Name: stripe_platform_customers_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_platform_customers_id_from_stripe_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_platform_customers_id_from_stripe_index ON stripe_platform_customers USING btree (id_from_stripe);
 
 
 --
--- Name: stripe_platform_customers_pkey; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_platform_customers_pkey; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_platform_customers_pkey ON stripe_platform_customers USING btree (id);
 
 
 --
--- Name: stripe_platform_customers_user_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: stripe_platform_customers_user_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX stripe_platform_customers_user_id_index ON stripe_platform_customers USING btree (user_id);
 
 
 --
--- Name: task_lists_project_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: task_lists_project_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX task_lists_project_id_index ON task_lists USING btree (project_id);
 
 
 --
--- Name: task_skills_task_id_skill_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: task_skills_task_id_skill_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX task_skills_task_id_skill_id_index ON task_skills USING btree (task_id, skill_id);
 
 
 --
--- Name: tasks_number_project_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: tasks_number_project_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX tasks_number_project_id_index ON tasks USING btree (number, project_id);
 
 
 --
--- Name: tasks_pkey; Type: INDEX; Schema: public; Owner: -
+-- Name: tasks_pkey; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX tasks_pkey ON tasks USING btree (id);
 
 
 --
--- Name: tasks_project_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: tasks_project_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX tasks_project_id_index ON tasks USING btree (project_id);
 
 
 --
--- Name: tasks_user_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: tasks_user_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE INDEX tasks_user_id_index ON tasks USING btree (user_id);
 
 
 --
--- Name: user_categories_user_id_category_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: user_categories_user_id_category_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX user_categories_user_id_category_id_index ON user_categories USING btree (user_id, category_id);
 
 
 --
--- Name: user_roles_user_id_role_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: user_roles_user_id_role_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX user_roles_user_id_role_id_index ON user_roles USING btree (user_id, role_id);
 
 
 --
--- Name: user_tasks_user_id_task_id_index; Type: INDEX; Schema: public; Owner: -
+-- Name: user_tasks_user_id_task_id_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX user_tasks_user_id_task_id_index ON user_tasks USING btree (user_id, task_id);
 
 
 --
--- Name: users_email_index; Type: INDEX; Schema: public; Owner: -
+-- Name: users_email_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX users_email_index ON users USING btree (email);
 
 
 --
--- Name: users_lower_username_index; Type: INDEX; Schema: public; Owner: -
+-- Name: users_lower_username_index; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
 CREATE UNIQUE INDEX users_lower_username_index ON users USING btree (lower((username)::text));
@@ -2601,4 +2597,5 @@ ALTER TABLE ONLY user_tasks
 -- PostgreSQL database dump complete
 --
 
-INSERT INTO "schema_migrations" (version) VALUES (20160723215749), (20160804000000), (20160804001111), (20160805132301), (20160805203929), (20160808143454), (20160809214736), (20160810124357), (20160815125009), (20160815143002), (20160816020347), (20160816034021), (20160817220118), (20160818000944), (20160818132546), (20160820113856), (20160820164905), (20160822002438), (20160822004056), (20160822011624), (20160822020401), (20160822044612), (20160830081224), (20160830224802), (20160911233738), (20160912002705), (20160912145957), (20160918003206), (20160928232404), (20161003185918), (20161019090945), (20161019110737), (20161020144622), (20161021131026), (20161031001615), (20161121005339), (20161121014050), (20161121043941), (20161121045709), (20161122015942), (20161123081114), (20161123150943), (20161124085742), (20161125200620), (20161126045705), (20161127054559), (20161205024856), (20161207112519), (20161209192504), (20161212005641), (20161214005935), (20161215052051), (20161216051447), (20161218005913), (20161219160401), (20161219163909), (20161220141753), (20161221085759), (20161226213600), (20161231063614), (20170102130055), (20170102181053), (20170104113708), (20170104212623), (20170104235423), (20170106013143), (20170115035159), (20170115230549), (20170121014100), (20170131234029), (20170201014901), (20170201025454), (20170201035458), (20170201183258), (20170220032224), (20170224233516), (20170226050552), (20170228085250), (20170308214128), (20170308220713), (20170308222552), (20170313130611), (20170318032449), (20170318082740), (20170324194827), (20170424215355), (20170501225441), (20170505224222);
+INSERT INTO "schema_migrations" (version) VALUES (20160723215749), (20160804000000), (20160804001111), (20160805132301), (20160805203929), (20160808143454), (20160809214736), (20160810124357), (20160815125009), (20160815143002), (20160816020347), (20160816034021), (20160817220118), (20160818000944), (20160818132546), (20160820113856), (20160820164905), (20160822002438), (20160822004056), (20160822011624), (20160822020401), (20160822044612), (20160830081224), (20160830224802), (20160911233738), (20160912002705), (20160912145957), (20160918003206), (20160928232404), (20161003185918), (20161019090945), (20161019110737), (20161020144622), (20161021131026), (20161031001615), (20161121005339), (20161121014050), (20161121043941), (20161121045709), (20161122015942), (20161123081114), (20161123150943), (20161124085742), (20161125200620), (20161126045705), (20161127054559), (20161205024856), (20161207112519), (20161209192504), (20161212005641), (20161214005935), (20161215052051), (20161216051447), (20161218005913), (20161219160401), (20161219163909), (20161220141753), (20161221085759), (20161226213600), (20161231063614), (20170102130055), (20170102181053), (20170104113708), (20170104212623), (20170104235423), (20170106013143), (20170115035159), (20170115230549), (20170121014100), (20170131234029), (20170201014901), (20170201025454), (20170201035458), (20170201183258), (20170220032224), (20170224233516), (20170226050552), (20170228085250), (20170308214128), (20170308220713), (20170308222552), (20170313130611), (20170318032449), (20170318082740), (20170324194827), (20170424215355), (20170501225441), (20170505224222), (20170526095401);
+
